@@ -41,11 +41,12 @@ alicevision_add_library(aliceVision_matching
     Boost::filesystem
     Boost::boost
     ${FLANN_LIBRARY}
+    lz4
 )
 
 # Unit tests
-alicevision_add_test(matching_test.cpp NAME "matching"          LINKS aliceVision_matching)
-alicevision_add_test(filters_test.cpp  NAME "matching_filters"  LINKS aliceVision_matching)
-alicevision_add_test(indMatch_test.cpp NAME "matching_indMatch" LINKS aliceVision_matching)
+alicevision_add_test(matching_test.cpp NAME "matching"          LINKS aliceVision_matching lz4)
+alicevision_add_test(filters_test.cpp  NAME "matching_filters"  LINKS aliceVision_matching lz4)
+alicevision_add_test(indMatch_test.cpp NAME "matching_indMatch" LINKS aliceVision_matching lz4)
 
 add_subdirectory(kvld)
