@@ -364,7 +364,7 @@ if(ALICEVISION_BUILD_MVS)
       FOLDER ${FOLDER_SOFTWARE_PIPELINE}
       LINKS aliceVision_system
             aliceVision_mvsUtils
-            MeshSDLibrary
+            /home/dima/debianstuff/openmesh/build/Build/lib/libOpenMeshCore.so.9.0
             Eigen3::Eigen
             Boost::program_options
             Boost::filesystem
@@ -376,10 +376,16 @@ if(ALICEVISION_BUILD_MVS)
       FOLDER ${FOLDER_SOFTWARE_PIPELINE}
       LINKS aliceVision_system
             aliceVision_mvsUtils
-            OpenMesh
+            /home/dima/debianstuff/openmesh/build/Build/lib/libOpenMeshCore.so.9.0
+            /home/dima/debianstuff/openmesh/build/Build/lib/libOpenMeshTools.so.9.0
             Boost::program_options
             Boost::filesystem
     )
+
+  add_definitions(-I/home/dima/debianstuff/MeshSDFilter -I/home/dima/debianstuff/openmesh/src)
+
+
+
   endif()
 
   # Mesh Filtering
