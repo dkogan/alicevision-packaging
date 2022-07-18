@@ -16,7 +16,7 @@
 #include <aliceVision/feature/imageStats.hpp>
 
 extern "C" {
-#include "nonFree/sift/vl/sift.h"
+#include "vl/sift.h"
 }
 
 #include <iostream>

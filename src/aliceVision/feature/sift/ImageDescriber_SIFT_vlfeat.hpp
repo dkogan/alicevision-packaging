@@ -13,7 +13,7 @@
 #include <aliceVision/feature/sift/SIFT.hpp>
 
 extern "C" {
-#include <nonFree/sift/vl/sift.h>
+#include <vl/sift.h>
 }
 
 #include <iostream>

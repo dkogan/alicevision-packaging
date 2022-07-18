@@ -124,8 +124,6 @@ std::size_t getMemoryConsumptionVLFeat(std::size_t width, std::size_t height, co
 void VLFeatInstance::initialize()
 {
   assert(nbInstances >= 0);
-  if(nbInstances <= 0)
-    vl_constructor();
   ++nbInstances;
 }
 
@@ -133,8 +131,6 @@ void VLFeatInstance::destroy()
 {
   assert(nbInstances > 0);
   --nbInstances;
-  if(nbInstances <= 0)
-    vl_destructor();
 }
 
 template <typename T>
